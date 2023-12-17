@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: url(pngtree-abstract-background-technology-of-data-applications-image_555017.jpg);
+    
+}
+#conteneur{
+   border: 15px solid white;
+   border-radius: 20px;
+   outline: 15px solid blue;
+   display: flex;
+   flex-direction: column-reverse;
+   height: 500px;
+   align-items:center;
+   width: 500px;
+   padding-left: 20px;
+   margin: auto;
+   margin-top: 100px;
+   background-image: url(pngtree-abstract-background-technology-of-data-applications-image_555017.jpg);
+   
+
+}
+#velocity{
+    width: 450px;
+    margin-bottom: 100px;
+    height: 50x;
+}
+#compteur{
+    width: 40px;
+    height: 30px;
+    padding: 50px;
+    padding-left: 60px;
+    margin: auto;
+    font-weight: bold;
+    font-size: 55px;
+    padding-inline-end: 95px;
+    color: white;
+}
+label{
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 55px;
+    color: white;
+    text-align: center;
+    border: 0;
+    width: auto;
+    height: 100px;
+    padding-inline-end: 40px;
+}
+#page{
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 55px;
+    color: white;
+    text-align: center;
+    order: 1;
+    padding-inline-end: 40px;
+}
+

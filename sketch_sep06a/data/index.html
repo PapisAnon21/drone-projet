@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)http://127.0.0.1:5500/Motor_velocity.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          
+        <link rel="stylesheet" href="index.css">
+        
+        <title >Motor_Speed</title>
+    </head>
+    <body id = "initialise">
+        <div id="conteneur">
+            <span >Page de contrôle</span>
+           
+            <div><label for="velocity">Vitesse du moteur</label></div>
+            <div><input type="range" id="velocity" min="0" max="255" oninput = 'send_speed()'></div>
+            <div >
+              <p id ="vitesse_affichee" >
+              20
+            </p>
+            </div>
+              
+        </div>
+  
+
+<script>
+var wskt;
+document.getElementById('initialise').onload = function()
+{init()};
+function init()
+{ 
+ wskt = new WebSocket('ws://' + window.location.hostname + ':81/');
+  
+}
+var valeur_speed;
+
+function send_speed() 
+{
+  valeur_speed = document.getElementById('velocity').value;
+  document.getElementById('vitesse_affichee').innerHTML = valeur_speed;
+  wskt.send(valeur_speed);
+  console.log(valeur_speed);
+}
+
+
+</script>
+    </body></html>
